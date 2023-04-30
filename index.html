@@ -11,54 +11,89 @@
 </head>
 
 <body>
+    <header>
+        <h1 class="weatherDash" id="dash">Weather Dashboard</h1>
+
+    </header>
+
+    <div class="display-container" id="cityDDMMYY">
+        <div class="display-containers-items" id="first-display-">
+            <h2 class="out-city-name" id="cityName"></h2>
+            <p class="date-display" id="date-item"></p>
+            <p class="icon-display" id="icon-item"></p>
+            <p class="out-city-temp" id="display-temp-title">Temp: </p>
+            <p class="out-city-wind" id="display-wind-title">Wind: </p>
+            <p class="out-city-humidity" id="display-humidity-title">Humidity: </p>
+        </div>
+    </div>
+
+    <div class="main-container" id="mc2">
+        <div class="items left-panel-stack">
+            <div id="search-area">
+                <h2>Search for a City:</h2>
+                <input type="text" id="city-input" placeholder="Search for a City">
+                <button class="buttons submit" id="submitBtn">Submit</button>
+            </div>
     
-        <h1 id="Para1"> 5-DAYS WEATHER FORECAST</h1>
-        <p id="inputContainer">City: <input type="text" id="cityInput"></p>
-        <button id="searchBtn"> Click Me </button>
-        <h2 id="cityName">--London--</h2>
-        
-            
-        <div id="weatherContainer">
-            <div id="current-weather">
-                <h3 id="city-name"></h3>
-                <p id="Temp"></p>
-                <p id="Wind"></p>
-                <p id="Humidity"></p>
+            <div class="cityButtons">
+                <button class="button1" id="alanta">Alanta</button>
+                <button class="button2" id="denver">Denver</button>
+                <button class="button3" id="seattle">Seattle</button>
+                <button class="button4" id="francisco">San Francisco</button>
+                <button class="button5" id="orlando">Orlando</button>
+                <button class="button6" id="new-york">New Your</button>
+                <button class="button7" id="chicago">Chicago</button>
+                <button class="button8" id="austin">Austin</button>
             </div>
-                <div id="iconsContainer">
-                    <div class="icons">
-                        <p class="weather" id="day1"></p>
-                        <div class="image"><img scr="dots.png" class="imgClass" id="img1" alt=""></div>
-                        <p class="minValues" id="day1Min">Loading...</p>
-                        <p class="maxValues" id="day2Max">Loading...</p>
-                    </div>
-                    <div class="icons">
-                        <p class="weather" id="day2"></p>
-                        <div class="image"><img scr="dots.png" class="imgClass" id="img2" alt=""></div>
-                        <p class="minValues" id="day2Min">Loading...</p>
-                        <p class="maxValues" id="day2Max">Loading...</p>
-                    </div>
-                    <div class="icons">
-                        <p class="weather" id="day3"></p>
-                        <div class="image"><img scr="dots.png" class="imgClass" id="img3" alt=""></div>
-                        <p class="minValues" id="day3Min">Loading...</p>
-                        <p class="maxValues" id="day3Max">Loading...</p>
-                    </div>
-                    <div class="icons">
-                        <p class="weather" id="day4"></p>
-                        <div class="image"><img scr="dots.png" class="imgClass" id="img4" alt=""></div>
-                        <p class="minValues" id="day4Min">Loading...</p>
-                        <p class="maxValues" id="day4Max">Loading...</p>
-                    </div>
-                    <div class="icons">
-                        <p class="weather" id="day5"></p>
-                        <div class="image"><img scr="dots.png" class="imgClass" id="img5" alt=""></div>
-                        <p class="minValues" id="day5Min">Loading...</p>
-                        <p class="maxValues" id="day5Max">Loading...</p>
-                    </div>
-                </div>
+        </div>
+    </div>
+</body>
+
+
+    <div class="center-container" id="five-day-forecast">
+        <div class="center-container-items" id="single-boxes">
+
+            <h3 class="box-title float-left" id="five-dc">5-DAY FORECAST</h3>
+
+            <div class="boxes" id="box1">
+                <p class="mm-dd-yyy" id="day1"></p>
+                <p class="icons" id="icon1"></p>
+                <p class="temp" id="temp1">Temp: </p>
+                <p class="wind" id="temp1">Wind: </p>
+                <p class="humidity" id="temp1">Humidity: </p>
             </div>
- <script src="./assets/js/index.js"></script>
+            <div class="boxes" id="box2">
+                <p class="mm-dd-yyy" id="day2"></p>
+                <p class="icons" id="icon2"></p>
+                <p class="temp" id="temp2">Temp: </p>
+                <p class="wind" id="temp2">Wind: </p>
+                <p class="humidity" id="temp2">Humidity: </p>
+            </div>
+            <div class="boxes" id="box3">
+                <p class="mm-dd-yyy" id="day3"></p>
+                <p class="icons" id="icon3"></p>
+                <p class="temp" id="temp3">Temp: </p>
+                <p class="wind" id="temp3">Wind: </p>
+                <p class="humidity" id="temp3">Humidity: </p>
+            </div>
+            <div class="boxes" id="box4">
+                <p class="mm-dd-yyy" id="day4"></p>
+                <p class="icons" id="icon4"></p>
+                <p class="temp" id="temp4">Temp: </p>
+                <p class="wind" id="temp4">Wind: </p>
+                <p class="humidity" id="temp4">Humidity: </p>
+            </div>
+            <div class="boxes" id="box5">
+                <p class="mm-dd-yyy" id="day5"></p>
+                <p class="icons" id="icon5"></p>
+                <p class="temp" id="temp5">Temp: </p>
+                <p class="wind" id="temp5">Wind: </p>
+                <p class="humidity" id="temp5">Humidity: </p>
+            </div>
+        </div>
+    </div>    
+        <script src="./assets/js/index.js"></script>
 </body>
 
 </html>
+
