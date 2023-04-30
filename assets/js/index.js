@@ -1,10 +1,12 @@
-var submitBtn = document.getElementById('submitBtn')
+const submitBtn = document.getElementById('submitBtn')
 
-var cityInput = document.getElementById('city-input')
-var apiKey = '0639c54aa963cab94c1a9a968f720718'
+const cityInput = document.getElementById('city-input')
+const apiKey = '0639c54aa963cab94c1a9a968f720718'
+
+
 function getCoord(cityName){
-    var getoUrl = 'https://api.openweathermap.org/data/2.5/weather?q='+ cityName + '&appid=' + apiKey
-    fetch(getoUrl)
+    var geoUrl = 'https://api.openweathermap.org/data/2.5/weather?q='+ cityName + '&appid=' + apiKey
+    fetch(geoUrl)
     .then(function(res){
         return res.json()
     })
@@ -18,9 +20,22 @@ getCoord(cityNameVal)
 })
 
 
+const atlantaBtn = document.getElementsByClassName('button1')[0]
 
+atlantaBtn.addEventListener("click", getAtlanta)
+function getAtlanta(){
+    var geoUrl = 'http://api.openweathermap.org/geo/1.0/direct?q=Atlanta&limit=5&appid=' + apiKey
+    fetch(geoUrl)
+    .then(function(res){
+        return res.json()
+    })
+    .then(function(data){
+        console.log(data)
+    })
+}
 
-
+    
+    
 
 
 
