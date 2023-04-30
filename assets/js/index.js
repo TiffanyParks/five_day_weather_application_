@@ -34,8 +34,33 @@ function getAtlanta(){
     })
 }
 
-    
-    
+const denverBtn = document.getElementsByClassName('button2')[0]
+
+denverBtn.addEventListener("click", getDenver)
+function getDenver(){
+    var geoUrl = 'http://api.openweathermap.org/geo/1.0/direct?q=Denver&limit=5&appid=' + apiKey
+    fetch(geoUrl)
+    .then(function(res){
+        return res.json()
+    })
+    .then(function(data){
+        console.log(data)
+    })
+}
+   
+const seattleBtn = document.getElementsByClassName('button3')[0]  
+seattleBtn.addEventListener("click", getSeattle)
+function getSeattle(){
+    var geoUrl = 'http://api.openweathermap.org/geo/1.0/direct?q=Seattle&limit=5&appid=' + apiKey
+    fetch(geoUrl)
+    .then(function(res){
+        return res.json()
+    })
+    .then(function(data){
+        console.log(data)
+    })
+}
+     
 
 
 
