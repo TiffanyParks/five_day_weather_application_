@@ -1,5 +1,5 @@
 const submitBtn = document.getElementById('submitBtn')
-
+const singleBox = document.getElementById('single-boxes')
 const cityInput = document.getElementById('city-input')
 const apiKey = '0639c54aa963cab94c1a9a968f720718'
 
@@ -9,10 +9,12 @@ function getCoord(cityName) {
     fetch(geoUrl)
         .then(function (res) {
             return res.json()
+
         })
         .then(function (data) {
             var cityName = document.getElementById('cityName')
             var dateItem = document.getElementById('date-item')
+            // var hour =dayjs().hour()
             var iconName = document.getElementById('icon-item')
             var temp = document.getElementById('display-temp-title')
             var wind = document.getElementById('display-wind-title')
@@ -20,7 +22,7 @@ function getCoord(cityName) {
             var description = document.getElementById('display-description-title')
 
             cityName.innerHTML = data.name
-            // dateItem.innerHTML=date
+            // dateItem.innerHTML=$('#dateItem').text(day.js().format('dddd, MMMM D YYYY'));
             iconName.innerHTML = `<img src='http://openweathermap.org/img/w/${data.weather[0].icon}.png' />`
 
             temp.innerHTML = Math.round((data.main.temp - 273) * (9 / 5) + 32) + 'degrees F'
@@ -35,36 +37,62 @@ function getCoord(cityName) {
                 return res.json()
             }).then(function (data) {
 
-                // // console.log(data.city)
+                var body = document.body;
 
-                for (let i = 0; i <= 4; i++) {
-                    const element = data.list[i];
-                    console.log(element)
-                    const temp = element.main.temp
-                    console.log(temp)
-                    // console.log(element.wind.speed)
+                for (let i = 0; i < 5; i++) {
 
+                    var listOne = data.list[i]
+                    // console.log(listOne)
 
-                    const wind = element.wind.speed
-                    console.log(wind)
+                    // var name2 = listOne.
+                    // var data2 = listOne.weather.icon
 
-                    // console.log(element.main.humidity)
+                    var icon2 = listOne.weather[0].icon
+                    console.log(icon2)
+                    var temp2 = listOne.main.temp
+                    console.log(temp2)
+                    var wind2 = listOne.wind.speed
+                    console.log(wind2)
+                    var humidity2 = listOne.main.humidity
+                    console.log(humidity2)
+                    var description2 = listOne.weather[0].description
+                    console.log(description2)
+                }
 
+                // city2.textContent = ''
+                // data2 .textContent = ''
+                icon2.textContent = `<img src='http://openweathermap.org/img/w/${data.weather[i].icon}.png' />`
+                temp2.textContent =  Math.round((listOne.main.temp - 273) * (9 / 5) + 32) + 'degrees F'
+                wind2.textContent = 'Wind: ' + wind2
+                description2.textContent = 'Description ' + description2
+                humidity2.textContent = 'Humidity: ' + humidity2
 
+                // tempEl.appendChild.temp2//needs initialization
+                // temp2.textContent = "Temp:" + temp2
+                // document.appendChild.tempEl
+                // tempEl.appendChild.temp2
+                // boxes.setAttribute("style", "display: inline-block, color:white; background:darkblue; height:10rem; width:8rem; padding:5px");
 
-                    const humidity = element.main.humidity
-                    console.log(humidity)
+                let boxes = document.createElement('div');
+                boxes.classList.add("boxes");
 
+                let dateEl = document.createElement('p');
+                dateEl.classList.add("mm-dd-yyy");
 
+                let iconEl = document.createElement('p');
+                iconEl.classList.add("icons");
 
+                let tempEl = document.createElement('p');
+                tempEl.classList.add("temp");
 
-                    const description = element.weather[0].description
-                    console.log(description)
+                let windEl = document.createElement('p');
+                windEl.classList.add("wind");
 
-                    const icon = element.weather[0].icon
-                        console.log(icon)
-                 }
+                let descriptionEl = document.createElement('p');
+                descriptionEl.classList.add("description");
 
+                let humidityEl = document.createElement('p');
+                humidityEl.classList.add("humidity");
             })
 
         })

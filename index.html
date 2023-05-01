@@ -6,8 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Five Day Forcast</title>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Krona+One&family=Pacifico&family=Roboto:wght@700&display=swap"
+    rel="stylesheet"
+  />   
     <link rel="stylesheet" href="./assets/css/style.css">
-
+ <!-- Link the DayJS library -->
+ <script
+ src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+ integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+ crossorigin="anonymous"
+></script>
 </head>
 
 <body>
@@ -56,41 +65,7 @@
 
             <h3 class="box-title float-left" id="five-dc">5-DAY FORECAST</h3>
 
-            <div class="boxes" id="box1">
-                <p class="mm-dd-yyy" id="day1"></p>
-                <p class="icons" id="icon1"></p>
-                <p class="temp" id="temp1">Temp: </p>
-                <p class="wind" id="temp1">Wind: </p>
-                <p class="humidity" id="temp1">Humidity: </p>
-            </div>
-            <div class="boxes" id="box2">
-                <p class="mm-dd-yyy" id="day2"></p>
-                <p class="icons" id="icon2"></p>
-                <p class="temp" id="temp2">Temp: </p>
-                <p class="wind" id="temp2">Wind: </p>
-                <p class="humidity" id="temp2">Humidity: </p>
-            </div>
-            <div class="boxes" id="box3">
-                <p class="mm-dd-yyy" id="day3"></p>
-                <p class="icons" id="icon3"></p>
-                <p class="temp" id="temp3">Temp: </p>
-                <p class="wind" id="temp3">Wind: </p>
-                <p class="humidity" id="temp3">Humidity: </p>
-            </div>
-            <div class="boxes" id="box4">
-                <p class="mm-dd-yyy" id="day4"></p>
-                <p class="icons" id="icon4"></p>
-                <p class="temp" id="temp4">Temp: </p>
-                <p class="wind" id="temp4">Wind: </p>
-                <p class="humidity" id="temp4">Humidity: </p>
-            </div>
-            <div class="boxes" id="box5">
-                <p class="mm-dd-yyy" id="day5"></p>
-                <p class="icons" id="icon5"></p>
-                <p class="temp" id="temp5">Temp: </p>
-                <p class="wind" id="temp5">Wind: </p>
-                <p class="humidity" id="temp5">Humidity: </p>
-            </div>
+          
         </div>
     </div>    
         <script src="./assets/js/index.js"></script>
