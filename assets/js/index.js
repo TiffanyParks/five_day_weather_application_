@@ -38,44 +38,32 @@ function getCoord(cityName) {
                 // // console.log(data.city)
 
                 for (let i = 0; i <= 4; i++) {
-                    const element = data.list[i]; 
+                    const element = data.list[i];
                     // console.log(element)
-
+                    const temp = element.main.temp
+                    console.log(temp)
                     // console.log(element.wind.speed)
-                    for (let i = 0; i <= 4; i++) {
-                        const temp = element.main.temp
-                        console.log(temp)
-
-                        for (let i = 0; i <= 4; i++) {
-                            const wind = element.wind.speed
-                            console.log(wind)
-
-                          // console.log(element.main.humidity)
 
 
-                            for (let i = 0; i <= 4; i++) {
-                                const humidity = element.main.humidity
-                                console.log(humidity)
+                    const wind = element.wind.speed
+                    console.log(wind)
 
-                            
-
-                            // for (let i = 0; i <= 4; i++) {
-                            //     const description = element.weather.description
-                            //     console.log(description)
-
-                                // for(let i = 0; i  <= 4; i++){
-                                //     const icon = element.weather.icon
-                                // //     console.log(icon)
-                                // }
-                            // }
-
-                            }
-
-                        }
+                    // console.log(element.main.humidity)
 
 
-                    }
-                }
+
+                    // const humidity = element.main.humidity
+                    // console.log(humidity)
+
+
+
+
+                    // const description = element.weather.description
+                    // console.log(description)
+
+                    // const icon = element.weather.icon
+                    //     console.log(icon)
+                 }
 
             })
 
