@@ -35,18 +35,46 @@ function getCoord(cityName) {
                 return res.json()
             }).then(function (data) {
 
-                // console.log(data.city)
+                // // console.log(data.city)
 
                 for (let i = 0; i <= 4; i++) {
-                    const element = data.list[i];
-                    console.log(element)
+                    const element = data.list[i]; 
+                    // console.log(element)
 
-                    console.log(element.main)
+                    // console.log(element.wind.speed)
                     for (let i = 0; i <= 4; i++) {
-                        const temp = element.temp
+                        const temp = element.main.temp
+                        console.log(temp)
+
+                        for (let i = 0; i <= 4; i++) {
+                            const wind = element.wind.speed
+                            console.log(wind)
+
+                          // console.log(element.main.humidity)
+
+
+                            for (let i = 0; i <= 4; i++) {
+                                const humidity = element.main.humidity
+                                console.log(humidity)
+
+                            
+
+                            // for (let i = 0; i <= 4; i++) {
+                            //     const description = element.weather.description
+                            //     console.log(description)
+
+                                // for(let i = 0; i  <= 4; i++){
+                                //     const icon = element.weather.icon
+                                // //     console.log(icon)
+                                // }
+                            // }
+
+                            }
+
+                        }
+
+
                     }
-
-
                 }
 
             })
