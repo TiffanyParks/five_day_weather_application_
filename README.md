@@ -37,10 +37,10 @@ JavaScript
 https://www.java.com/en/download/manual.jsp
 
 Local Storage
-
+CSS
 HTML
 
-CSS
+
 <img width="476" alt="image" src="https://user-images.githubusercontent.com/126128634/235545698-c59d6ffc-3974-4b53-b08d-9a423a9f8c4b.png">
 
 
