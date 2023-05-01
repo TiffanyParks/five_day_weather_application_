@@ -39,7 +39,7 @@ function getCoord(cityName) {
 
                 for (let i = 0; i <= 4; i++) {
                     const element = data.list[i];
-                    // console.log(element)
+                    console.log(element)
                     const temp = element.main.temp
                     console.log(temp)
                     // console.log(element.wind.speed)
@@ -52,17 +52,17 @@ function getCoord(cityName) {
 
 
 
-                    // const humidity = element.main.humidity
-                    // console.log(humidity)
+                    const humidity = element.main.humidity
+                    console.log(humidity)
 
 
 
 
-                    // const description = element.weather.description
-                    // console.log(description)
+                    const description = element.weather[0].description
+                    console.log(description)
 
-                    // const icon = element.weather.icon
-                    //     console.log(icon)
+                    const icon = element.weather[0].icon
+                        console.log(icon)
                  }
 
             })
