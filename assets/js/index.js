@@ -34,15 +34,21 @@ function getCoord(cityName) {
             fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}`).then(function (res) {
                 return res.json()
             }).then(function (data) {
-               
-               
-                console.log(data.city)
+
+                // console.log(data.city)
+
                 for (let i = 0; i <= 4; i++) {
                     const element = data.list[i];
                     console.log(element)
+
                     console.log(element.main)
-                    
+                    for (let i = 0; i <= 4; i++) {
+                        const temp = element.temp
+                    }
+
+
                 }
+
             })
 
         })

@@ -1,11 +1,12 @@
 #dash {
     color: white;
     background-color: blue;
-    margin: 1rem;
+    margin: 0, auto;
     padding: 5px;
+    width: 67vw;
 }
 .main-container{
-    margin-bottom: 14rem;
+    margin-bottom: 5rem;
 }
 
 button {
@@ -19,22 +20,27 @@ button {
     position: absolute;
     top: 3rem;
     left: 0;
-}
+    margin: 4px;
+    padding: 3px
+} 
 
 #search-area, .buttons {
     margin-top: 3rem;
     margin-left: 0;
+  
 }
 
 .cityButtons {
     position: absolute;
     top: 20rem;
     left: 0;
+    margin: 4px;
+    padding: 3px;
 }
 
 .display-container {
-    max-width: 58vw;
-    height: 15vh;
+    max-width: 30vw;
+    height: 40vh;
     margin-top: 3rem;
     margin-left: 20rem;
     border: 2px black solid;
